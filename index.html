@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>JS Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header>
         <h1 class="text-5xl text-center font-mono">JS Calculator</h1>
@@ -14,34 +16,62 @@
     <main>
         <div class="container mx-auto">
             <div id="output" class="flex">
-                <textarea name="" id="output-field" cols="45" rows="3" class="mx-auto border-2 text-4xl w-2/4 my-5 px-5 py-2"></textarea>
+                <div name="" id="output-field" class="mx-auto border-2 text-xl w-2/4 h-16 my-5 px-5 py-2 ">
+                </div>
+
             </div>
-            <div id="input" class="bg-slate-600 w-2/4 mx-auto py-5  ">
-             
-                  <div class="flex justify-center">
-                    <div id="digits-container" class="grid grid-cols-3 gap-x-12 w-96">
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">1</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">2</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">3</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">4</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">5</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">6</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">7</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">8</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-2 rounded-full mx-auto">9</button>
+            <div id="input" class="bg-slate-600 w-2/5 mx-auto py-5">
+
+                <div hidden>
+                    <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">C</button>
+
+                    <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">()</button>
+
+                    <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">%</button>
+                </div>
+                <div class="flex justify-center">
+                    <div id="digits-container" class="grid grid-cols-3  gap-x-5 ">
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">1</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">2</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">3</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">4</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">5</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">6</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">7</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">8</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">9</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2  my-2 rounded-full mx-auto">0</button>
                     </div>
-                    <div id="operators-container" class="ml-5">
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-4 rounded-full mx-auto">X</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-4 rounded-full mx-auto">-</button>
-                        <button class="bg-zinc-300 text-4xl w-16 h-16 text-center p-2 my-4 rounded-full mx-auto">+</button>
+                    <div id="operators-container" class="ml-5 flex flex-col ">
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">X</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">-</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">+</button>
                     </div>
-                  </div>
-                
+                    <div>
+                        <button id="btn-equals"
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">=</button>
+                    </div>
+                </div>
+
             </div>
 
-            
-        
+
+
     </main>
     <script src="src/app.js"></script>
 </body>
+
 </html>
