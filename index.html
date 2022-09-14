@@ -15,37 +15,48 @@
     </header>
     <main>
         <div class="container mx-auto">
-            <div id="output" class="flex">
-                <div name="" id="output-field" class="mx-auto border-2 text-xl w-2/4 h-16 my-5 px-5 py-2 font-mono">
+            <div id="output" class="">
+                <div name="" id="output-field"
+                    class="flex justify-center items-center mx-auto border-2 text-2xl w-2/4 h-16 my-5  font-mono text-center">
                 </div>
 
             </div>
-            <div id="input" class="bg-slate-600 w-2/5 mx-auto py-5 font-mono">
+            <div id="input" class="bg-slate-400 w-2/5 mx-auto py-5 font-mono">
 
-                <div hidden class="font-mono">
-                    <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">C</button>
-
-                    <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">()</button>
-
-                    <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">%</button>
-                </div>
-                <div class="flex justify-center font-mono">
-                    <div id="digits-container" class="grid grid-cols-3 gap-x-5 ">
-                       
+                <div class="grid grid-cols-3  font-mono ">
+                    <div  class="font-mono bg-indigo-500 col-span-3 ">
+                        <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">C</button>
+    
+                        <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">()</button>
+    
+                        <button class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">%</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full ">/</button>
                     </div>
-                    <div id="operators-container" class="ml-5 flex flex-col font-mono ">
-                        <button
-                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">X</button>
-                        <button
-                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">-</button>
-                        <button
-                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto">+</button>
+                    <!-- digits container -->
+                    <div id="digits-container" class="grid grid-cols-3 gap-x-5  col-span-2 bg-red-400 px-3">
+                        <div class="order-last col-span-3 flex justify-center">
+                            <button class="bg-zinc-300 text-xl w-10 h-10  p-2 my-2 rounded-full">0</button>
+                        </div>
+
                     </div>
+
+                    <div id="operators-container" class="flex flex-col font-mono items-center bg-blue-300">
+                        
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full ">X</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full ">-</button>
+                        <button
+                            class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full ">+</button>
+                        <div class="mx-auto">
+                            <button id="btn-equals"
+                                class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto font-mono">=</button>
+                        </div>
+                    </div>
+
                 </div>
-                <div>
-                    <button id="btn-equals"
-                        class="bg-zinc-300 text-xl w-10 h-10 text-center p-2 my-2 rounded-full mx-auto font-mono">=</button>
-                </div>
+
 
             </div>
 

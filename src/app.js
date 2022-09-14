@@ -34,7 +34,12 @@ operatorsContainer.addEventListener("click", (e) => {
     console.log(operator);
   }
 });
-const equalsButton = document.getElementById('btn-equals').addEventListener('click',()=>{
+
+
+
+
+const equalsButton = document.getElementById('btn-equals').addEventListener('click',(e)=>{
+    e.stopImmediatePropagation()
     if (operator === 'X') {
         const result  =  parseInt(leftOperand)*parseInt(rightOperand);
         outputField.innerText = result;
