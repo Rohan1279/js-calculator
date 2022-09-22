@@ -51,12 +51,18 @@ const equalsButton = document
     if (operator === "X") {
       const result = parseInt(leftOperand) * parseInt(rightOperand);
       outputField.innerText = result;
+      leftOperand = result;
+      rightOperand = "0";
     } else if (operator === "+") {
       const result = parseInt(leftOperand) + parseInt(rightOperand);
       outputField.innerText = result;
+      leftOperand = result;
+      rightOperand = "0";
     } else {
       const result = parseInt(leftOperand) - parseInt(rightOperand);
       outputField.innerText = result;
+      leftOperand = result;
+      rightOperand = "0";
     }
   });
 const clearButton = document
@@ -67,5 +73,5 @@ const clearButton = document
     leftOperand = "0";
     rightOperand = "0";
     operator = "";
-    // console.log(outputField.innerText);
+    console.log(outputField.innerText);
   });
