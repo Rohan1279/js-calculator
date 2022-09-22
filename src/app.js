@@ -19,18 +19,18 @@ for (let i = 1; i < 10; i++) {
 
 const operatorsContainer = document.getElementById("operators-container");
 const outputField = document.getElementById("output-field");
-
 let leftOperand = "0";
 let rightOperand = "0";
 let operator = "";
+const result = parseInt(leftOperand) * parseInt(rightOperand);
 digitsContainer.addEventListener("click", (e) => {
   if (e.target.localName === "button") {
     outputField.innerText += e.target.innerText;
     if (operator === "") {
-      leftOperand += parseInt(e.target.innerText);
-      // console.log(leftOperand);
+      leftOperand += (e.target.innerText);
+      console.log(leftOperand);
     } else {
-      rightOperand += parseInt(e.target.innerText);
+      rightOperand += (e.target.innerText);
       // console.log(rightOperand);
     }
   }
@@ -49,29 +49,27 @@ const equalsButton = document
   .addEventListener("click", (e) => {
     e.stopImmediatePropagation();
     if (operator === "X") {
-      const result = parseInt(leftOperand) * parseInt(rightOperand);
       outputField.innerText = result;
       leftOperand = result;
-      rightOperand = "0";
     } else if (operator === "+") {
       const result = parseInt(leftOperand) + parseInt(rightOperand);
       outputField.innerText = result;
       leftOperand = result;
-      rightOperand = "0";
     } else {
       const result = parseInt(leftOperand) - parseInt(rightOperand);
       outputField.innerText = result;
       leftOperand = result;
-      rightOperand = "0";
     }
+    rightOperand = "0";
+    operator = "";
+    console.log(outputField.innerText);
   });
 const clearButton = document
   .getElementById("btn-clear")
   .addEventListener("click", () => {
-    console.log("clear!!!");
+    // console.log("clear!!!");
     outputField.innerText = "";
     leftOperand = "0";
     rightOperand = "0";
     operator = "";
-    console.log(outputField.innerText);
   });
