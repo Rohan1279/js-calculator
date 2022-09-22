@@ -28,7 +28,7 @@ digitsContainer.addEventListener("click", (e) => {
     outputField.innerText += e.target.innerText;
     if (operator === "") {
       leftOperand += (e.target.innerText);
-      console.log(leftOperand);
+      // console.log(leftOperand);
     } else {
       rightOperand += (e.target.innerText);
       // console.log(rightOperand);
